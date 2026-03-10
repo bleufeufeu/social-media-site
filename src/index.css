@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Bricolage;
+  src: url(/src/assets/fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+:root {
+  font-family: Bricolage, sans-serif;
+
+  color-scheme: light dark;
+  color: #ffffff;
+  background-color: #0a0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 1vw 10vw;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
