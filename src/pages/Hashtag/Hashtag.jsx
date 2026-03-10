@@ -35,7 +35,7 @@ export default function Hashtag() {
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/posts/hashtag/${hashtagName}`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/hashtag/${hashtagName}`, {
                     method: "get",
                     headers: {
                         'Content-Type': 'application/json',

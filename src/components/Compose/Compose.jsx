@@ -32,7 +32,7 @@ export default function Compose() {
                 const formData = new FormData();
                 formData.append("file", file);
 
-                const uploadRes = await fetch(`http://localhost:3000/upload`, {
+                const uploadRes = await fetch(`https://social-media-site-api.onrender.com/upload`, {
                     method: "post",
                     headers: {
                         'Authorization': `Bearer ${storedToken}`
@@ -44,7 +44,7 @@ export default function Compose() {
                 fileUrl = uploadData.url;
             }
 
-            const response = await fetch(`http://localhost:3000/posts/new`, {
+            const response = await fetch(`https://social-media-site-api.onrender.com/posts/new`, {
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json',

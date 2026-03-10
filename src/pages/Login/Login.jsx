@@ -28,7 +28,7 @@ export default function Login() {
         setFormState({...formState, [name]: value})
     }
 
-    const loginUrl = "http://localhost:3000/login"
+    const loginUrl = "https://social-media-site-api.onrender.com/login"
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -86,7 +86,7 @@ export default function Login() {
 
                 <button className="pt-1 pb-1 pr-3 pl-3 rounded-2xl bg-teal-700 hover:bg-teal-600 hover:cursor-pointer" type="submit" disabled={loading}>Login</button>
 
-                <a className="flex justify-center items-center gap-1 pt-1 pb-1 pr-3 pl-3 rounded-2xl bg-neutral-700 hover:bg-neutral-600 hover:cursor-pointer" href="http://localhost:3000/login/github"><FaGithub /> Login with GitHub</a>
+                <a className="flex justify-center items-center gap-1 pt-1 pb-1 pr-3 pl-3 rounded-2xl bg-neutral-700 hover:bg-neutral-600 hover:cursor-pointer" href="https://social-media-site-api.onrender.com/login/github"><FaGithub /> Login with GitHub</a>
                 <div>Don't have an account? <Link to="/signup" className="text-teal-500 hover:underline">Sign up</Link></div>
             </form>
         </div>

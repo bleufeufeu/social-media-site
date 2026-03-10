@@ -11,7 +11,7 @@ export default function Sidebar() {
     const [loading, setLoading] = useState(false);
     const [incomingList, setIncomingList] = useState([]);
 
-    const incomingUrl = "http://localhost:3000/follow/incoming"
+    const incomingUrl = "https://social-media-site-api.onrender.com/follow/incoming"
 
     useEffect(() => {
             if (authLoading) return;

@@ -20,7 +20,7 @@ export default function SettingsSecurity() {
         confirmPassword: "",
     });
 
-    const passwordUrl = "http://localhost:3000/users/me/newpassword"
+    const passwordUrl = "https://social-media-site-api.onrender.com/users/me/newpassword"
 
     const onSubmit = async (event) => {
         event.preventDefault();

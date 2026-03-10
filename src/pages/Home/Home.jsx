@@ -32,7 +32,7 @@ export default function Home() {
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/posts/following`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/following`, {
                     method: "get",
                     headers: {
                         'Content-Type': 'application/json',

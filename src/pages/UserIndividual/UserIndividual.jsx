@@ -43,7 +43,7 @@ export default function UserIndividual() {
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/users/${userId}/posts`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/users/${userId}/posts`, {
                     method: "get",
                     headers: {
                         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export default function UserIndividual() {
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/users/${userId}/likes`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/users/${userId}/likes`, {
                     method: "get",
                     headers: {
                         'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ export default function UserIndividual() {
         const storedToken = localStorage.getItem("token");
 
         if (storedToken) {
-            const response = await fetch(`http://localhost:3000/follow/${recipientId}/new`, {
+            const response = await fetch(`https://social-media-site-api.onrender.com/follow/${recipientId}/new`, {
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ export default function UserIndividual() {
         if (myUsername === userId) return;
 
         if (storedToken) {
-            const response = await fetch(`http://localhost:3000/users/${userId}/block`, {
+            const response = await fetch(`https://social-media-site-api.onrender.com/users/${userId}/block`, {
                 method: "put",
                 headers: {
                     'Content-Type': 'application/json',

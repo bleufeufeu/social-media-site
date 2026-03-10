@@ -20,7 +20,7 @@ export default function Signup() {
         setFormState({...formState, [name]: value})
     }
 
-    const signupUrl = "http://localhost:3000/signup/"
+    const signupUrl = "https://social-media-site-api.onrender.com/signup/"
 
     const onSubmit = async (event) => {
         event.preventDefault();

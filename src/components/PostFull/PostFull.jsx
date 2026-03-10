@@ -37,7 +37,7 @@ export default function PostFull({ postDetails }) {
 
         if (storedToken) {
             try {
-                const response = await fetch(`http://localhost:3000/posts/${postId}/repost`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/${postId}/repost`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function PostFull({ postDetails }) {
 
         if (storedToken) {
             try {
-                const response = await fetch(`http://localhost:3000/posts/${postId}/like`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/${postId}/like`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export default function PostFull({ postDetails }) {
 
         if (storedToken) {
             try {
-                const response = await fetch(`http://localhost:3000/posts/${postId}/comment`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/${postId}/comment`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ export default function PostFull({ postDetails }) {
                 } else {
                     setCommentCount(prev => prev + 1);
 
-                    const refetchComments = await fetch(`http://localhost:3000/posts/${postData.id}`, {
+                    const refetchComments = await fetch(`https://social-media-site-api.onrender.com/posts/${postData.id}`, {
                         method: "get",
                         headers: {
                             'Content-Type': 'application/json',

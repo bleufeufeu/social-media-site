@@ -38,7 +38,7 @@ export default function PostCard({ postDetails }) {
 
         if (storedToken) {
             try {
-                const response = await fetch(`http://localhost:3000/posts/${postId}/repost`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/${postId}/repost`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export default function PostCard({ postDetails }) {
 
         if (storedToken) {
             try {
-                const response = await fetch(`http://localhost:3000/posts/${postId}/like`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/${postId}/like`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',

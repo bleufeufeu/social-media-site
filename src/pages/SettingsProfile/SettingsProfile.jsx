@@ -39,7 +39,7 @@ export default function SettingsProfile() {
         setFormState({...formState, [name]: value})
     }
 
-    const updateUrl = "http://localhost:3000/users/me/details"
+    const updateUrl = "https://social-media-site-api.onrender.com/users/me/details"
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -54,7 +54,7 @@ export default function SettingsProfile() {
                     const formData = new FormData();
                     formData.append("file", file);
 
-                    const uploadRes = await fetch(`http://localhost:3000/upload`, {
+                    const uploadRes = await fetch(`https://social-media-site-api.onrender.com/upload`, {
                         method: "post",
                         headers: {
                             'Authorization': `Bearer ${storedToken}`

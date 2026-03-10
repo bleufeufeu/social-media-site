@@ -24,8 +24,8 @@ export default function Users() {
         }
     },[authLoading, loggedIn, navigate]);
 
-    const usersUrl = "http://localhost:3000/users/all"
-    const incomingUrl = "http://localhost:3000/follow/incoming"
+    const usersUrl = "https://social-media-site-api.onrender.com/users/all"
+    const incomingUrl = "https://social-media-site-api.onrender.com/follow/incoming"
 
     useEffect(() => {
         if (authLoading) return;
@@ -101,7 +101,7 @@ export default function Users() {
         const storedToken = localStorage.getItem("token");
 
         if (storedToken) {
-            const response = await fetch(`http://localhost:3000/follow/${recipientId}/new`, {
+            const response = await fetch(`https://social-media-site-api.onrender.com/follow/${recipientId}/new`, {
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export default function Users() {
         const storedToken = localStorage.getItem("token");
 
         if (storedToken) {
-            const response = await fetch(`http://localhost:3000/follow/${senderId}/accept`, {
+            const response = await fetch(`https://social-media-site-api.onrender.com/follow/${senderId}/accept`, {
                 method: "put",
                 headers: {
                     'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ export default function Users() {
         const storedToken = localStorage.getItem("token");
 
         if (storedToken) {
-            const response = await fetch(`http://localhost:3000/follow/${senderId}/deny`, {
+            const response = await fetch(`https://social-media-site-api.onrender.com/follow/${senderId}/deny`, {
                 method: "put",
                 headers: {
                     'Content-Type': 'application/json',

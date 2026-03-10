@@ -16,7 +16,7 @@ export default function SettingsPrivacy() {
 
     const [isPrivate, setIsPrivate] = useState(authUser.isPrivate);
 
-    const passwordUrl = "http://localhost:3000/users/me/private"
+    const passwordUrl = "https://social-media-site-api.onrender.com/users/me/private"
 
     const onSubmit = async (event) => {
         event.preventDefault();

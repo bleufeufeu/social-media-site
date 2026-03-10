@@ -31,7 +31,7 @@ export default function PostIndividual() {
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/posts/${postId}`, {
+                const response = await fetch(`https://social-media-site-api.onrender.com/posts/${postId}`, {
                     method: "get",
                     headers: {
                         'Content-Type': 'application/json',
